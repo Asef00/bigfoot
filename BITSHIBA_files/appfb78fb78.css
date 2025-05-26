@@ -75,7 +75,6 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
 }
 [tabindex='-1']:focus:not(:focus-visible) {
   outline: 0 !important;
@@ -9411,18 +9410,10 @@ a.text-dark:hover {
   display: flex;
   height: 2em;
   width: 2em;
+  background: linear-gradient(90deg, #000000 0%, #1a1331 50%, #000000 100%);
 }
 .preloader-container {
-  background-color: #282828;
   opacity: 1;
-  background-size: 10px 10px;
-  background-image: repeating-linear-gradient(
-    45deg,
-    #000002 0,
-    #1a1331 1px,
-    #000000 0,
-    #1a1331 50%
-  );
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -9433,7 +9424,26 @@ a.text-dark:hover {
   bottom: 0;
   right: 0;
   z-index: 999999;
+  background: linear-gradient(90deg, #000000 0%, #1a1331 50%, #000000 100%);
+}
+.preloader-container-inner {
+  background-size: 26px 26px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #5454547a 0,
+    #5454547a 0.5px,
+    transparent 0,
+    transparent 50%
+  );
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
 }
 .preloader,
 .preloader-container {
@@ -9971,7 +9981,7 @@ a.text-dark:hover {
   transition: all 0.2s ease;
 }
 .navbar.active {
-  background: #000e1d;
+  background: #000000f0;
 }
 @media (max-width: 480px) and (min-width: 320px) {
   .navbar.active {
@@ -10544,17 +10554,18 @@ html {
 html * {
   font-family: Poppins, sans-serif;
 }
+html {
+  background: linear-gradient(90deg, #000000 0%, #1a1331 50%, #000000 100%);
+}
 body {
   overflow-x: hidden;
-  background-color: #282828;
-  opacity: 1;
-  background-size: 10px 10px;
+  background-size: 26px 26px;
   background-image: repeating-linear-gradient(
     45deg,
-    #000002 0,
-    #1a1331 1px,
-    #000000 0,
-    #1a1331 50%
+    #5454547a 0,
+    #5454547a 0.5px,
+    transparent 0,
+    transparent 50%
   );
 }
 
