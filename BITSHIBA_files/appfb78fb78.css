@@ -9413,13 +9413,16 @@ a.text-dark:hover {
   width: 2em;
 }
 .preloader-container {
-  background-color: #000e1d;
-  background-image: url(../20215.jpg);
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  background-attachment: fixed;
+  background-color: #282828;
+  opacity: 1;
+  background-size: 10px 10px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #000002 0,
+    #1a1331 1px,
+    #000000 0,
+    #1a1331 50%
+  );
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -10543,15 +10546,18 @@ html * {
 }
 body {
   overflow-x: hidden;
-  background: linear-gradient(
-    147deg,
-    #000000 0%,
-    #382870 20%,
-    #000000 40%,
-    #382870 60%,
-    #000000 100%
+  background-color: #282828;
+  opacity: 1;
+  background-size: 10px 10px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #000002 0,
+    #1a1331 1px,
+    #000000 0,
+    #1a1331 50%
   );
 }
+
 .bg-fixed {
   position: fixed;
   width: 100%;
