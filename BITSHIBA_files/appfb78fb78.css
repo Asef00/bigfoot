@@ -5228,8 +5228,7 @@ a.close.disabled {
   border-radius: 0.3rem;
   border: 0px;
   outline: 0;
-  background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #6104 74%);
+  background-color: #000000f0;
 }
 .modal-backdrop {
   position: fixed;
@@ -9374,7 +9373,7 @@ a.text-dark:hover {
 }
 .modal-header {
   border-bottom: 0;
-  color: #f1d848;
+  color: #fff;
   margin-bottom: 0;
   padding-bottom: 0;
 }
