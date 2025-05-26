@@ -10101,7 +10101,6 @@ a.text-dark:hover {
   margin-bottom: 35px;
   text-transform: uppercase;
   position: relative;
-  font-weight: 700;
   animation: glitch-skew 1s linear infinite alternate-reverse;
 }
 @media (max-width: 1440px) and (min-width: 1025px) {
