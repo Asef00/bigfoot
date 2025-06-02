@@ -10530,15 +10530,3 @@ body {
     transparent 50%
   );
 }
-
-.bg-fixed {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: 50%;
-  top: 0;
-  right: 0;
-  z-index: -1000;
-  background-image: url(../20215.jpg);
-}
