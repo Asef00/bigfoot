@@ -8,8 +8,8 @@
 // Add data-aos="fade-up" to HTML elements you wish to animate
 // Example: <div data-aos="fade-up">This will fade in up when scrolled into view</div>
 
-//Check if the document is loaded (so that this script can be placed in the <head>)
 document.addEventListener('DOMContentLoaded', () => {
+  // Animation observer setup
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
