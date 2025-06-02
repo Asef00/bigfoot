@@ -10112,8 +10112,6 @@ a.text-dark:hover {
   font-size: 37px;
   margin-bottom: 35px;
   text-transform: uppercase;
-  position: relative;
-  animation: glitch-skew 1s linear infinite alternate-reverse;
 }
 @media (max-width: 1440px) and (min-width: 1025px) {
   .hero-desc {
@@ -10122,8 +10120,6 @@ a.text-dark:hover {
 }
 @media (max-width: 480px) and (min-width: 320px) {
   .hero-desc {
-    -webkit-animation: none;
-    animation: none;
     font-size: 24px;
   }
 }

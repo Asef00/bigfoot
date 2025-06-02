@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       // Configuration options
-      threshold: 0.1, // Trigger when at least 10% of the element is visible
+      threshold: 0, // Trigger when at least 10% of the element is visible
       rootMargin: '0px', // No margin around the viewport
     }
   );
