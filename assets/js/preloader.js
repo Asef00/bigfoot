@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (preloader) {
       // Add Animate.css classes for fade out
       preloader.classList.add('animate__animated', 'animate__fadeOut');
+
+      // Remove preloader from DOM after animation completes
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1000); // Animate.css fadeOut duration is 1s
     }
   };
 
