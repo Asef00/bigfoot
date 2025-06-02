@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Force a reflow
           collapse.offsetHeight;
           // Remove show class and set height to 0
-          collapse.classList.remove('show');
+          setTimeout(() => collapse.classList.remove('show'), 1000);
           collapse.style.maxHeight = '0';
 
           // Reset the plus/minus icon with transition
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Force a reflow
         targetElement.offsetHeight;
         // Remove show class and set height to 0
-        targetElement.classList.remove('show');
+        setTimeout(() => targetElement.classList.remove('show'), 1000);
         targetElement.style.maxHeight = '0';
 
         // Toggle icons
