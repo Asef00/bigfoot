@@ -1,9 +1,9 @@
 // FAQ Accordion functionality
 document.addEventListener('DOMContentLoaded', () => {
-  const faqLinks = document.querySelectorAll('.card-link');
+  const faqLinks = document.querySelectorAll('[data-toggle="collapse"]');
 
   // Add transition styles to collapse elements
-  document.querySelectorAll('.collapse').forEach((collapse) => {
+  document.querySelectorAll('.faq .collapse').forEach((collapse) => {
     collapse.style.transition = 'all 0.3s ease-in-out';
     collapse.style.maxHeight = '0';
     collapse.style.overflow = 'hidden';
@@ -23,19 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
 
       // Close all other FAQ items
-      document.querySelectorAll('.collapse').forEach((collapse) => {
+      document.querySelectorAll('.faq .collapse').forEach((collapse) => {
         if (collapse !== targetElement && collapse.classList.contains('show')) {
           // Set the height to the current height before transitioning
           collapse.style.maxHeight = collapse.scrollHeight + 'px';
           // Force a reflow
           collapse.offsetHeight;
           // Remove show class and set height to 0
-          setTimeout(() => collapse.classList.remove('show'), 1000);
+          setTimeout(() => collapse.classList.remove('show'), 500);
           collapse.style.maxHeight = '0';
 
           // Reset the plus/minus icon with transition
-          const parentLink =
-            collapse.previousElementSibling.querySelector('.card-link');
+          const parentLink = collapse.previousElementSibling.querySelector(
+            '[data-toggle="collapse"]'
+          );
           const collapsedIcon = parentLink.querySelector('.collapsed');
           const expandedIcon = parentLink.querySelector('.expanded');
           collapsedIcon.style.opacity = '1';
@@ -54,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Force a reflow
         targetElement.offsetHeight;
         // Remove show class and set height to 0
-        setTimeout(() => targetElement.classList.remove('show'), 1000);
+        setTimeout(() => targetElement.classList.remove('show'), 500);
         targetElement.style.maxHeight = '0';
 
         // Toggle icons
