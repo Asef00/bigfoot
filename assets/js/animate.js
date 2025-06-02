@@ -14,22 +14,35 @@ document.addEventListener('DOMContentLoaded', () => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Add the animation classes
-          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-          // Optional: Unobserve the element after animation to prevent re-animation
-          observer.unobserve(entry.target);
+          // Add a small delay before starting the animation
+          setTimeout(() => {
+            // Add the animation classes
+            entry.target.classList.add(
+              'animate__animated',
+              'animate__fadeInUp'
+            );
+            // Optional: Unobserve the element after animation to prevent re-animation
+            observer.unobserve(entry.target);
+          }, 100); // Small delay to make it smoother
         }
       });
     },
     {
       // Configuration options
-      threshold: 0, // Trigger when at least 10% of the element is visible
-      rootMargin: '0px', // No margin around the viewport
+      threshold: 0.1, // Trigger when at least 10% of the element is visible
+      rootMargin: '50px', // Start animation slightly before element comes into view
     }
   );
 
   // Get all elements with data-aos="fade-up"
   const allAnimatedElements = document.querySelectorAll('[data-aos="fade-up"]');
+
+  // Add initial styles to prevent flash of unstyled content
+  allAnimatedElements.forEach((element) => {
+    element.style.opacity = '0';
+    element.style.transform = 'translateY(20px)';
+    element.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+  });
 
   // Add the observer to each element
   allAnimatedElements.forEach((element) => observer.observe(element));
