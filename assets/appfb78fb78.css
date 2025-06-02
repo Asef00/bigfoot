@@ -10530,3 +10530,9 @@ body {
     transparent 50%
   );
 }
+
+@media (max-width: 480px) {
+  #preloader-name {
+    display: none;
+  }
+}
