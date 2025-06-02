@@ -39,5 +39,5 @@ document.addEventListener('DOMContentLoaded', () => {
         closeModal();
       }
     });
-  }, 4000);
+  }, 6000);
 });
