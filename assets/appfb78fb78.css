@@ -9987,12 +9987,6 @@ a.text-dark:hover {
   background-color: #f1d848;
   width: 18px;
 }
-@media (max-width: 480px) and (min-width: 320px) {
-  .navbar-landing .navbar-collapse {
-    background: #000e1d;
-    height: auto;
-  }
-}
 .navbar-landing .nav-item .nav-link {
   color: #fff;
   padding: 10px 25px;
