@@ -59,5 +59,3 @@ If you need to deploy manually:
 - `assets/` - Contains all static assets (images, CSS, JS)
 - `.github/workflows/` - Contains GitHub Actions workflow files
 - `index.html` - Main HTML file
-
-TEST
