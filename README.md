@@ -13,7 +13,7 @@ To enable automatic deployment to cPanel, you need to set up the following secre
    - `FTP_SERVER`: Your cPanel FTP server (e.g., ftp.yourdomain.com)
    - `FTP_USERNAME`: Your cPanel FTP username
    - `FTP_PASSWORD`: Your cPanel FTP password
-   - `FTP_SERVER_DIR`: The directory on your cPanel server where the files should be deployed (e.g., /public_html/)
+   - `FTP_SERVER_DIR`: The directory on your cPanel server where the files should be deployed (e.g., /public_html/) (must end with /)
 
 ### cPanel Setup
 
@@ -58,4 +58,4 @@ If you need to deploy manually:
 
 - `assets/` - Contains all static assets (images, CSS, JS)
 - `.github/workflows/` - Contains GitHub Actions workflow files
-- `index.html` - Main HTML file.
+- `index.html` - Main HTML file
