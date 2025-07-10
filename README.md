@@ -1,4 +1,4 @@
-# Skeletor Project
+# Token Project
 
 ## Deployment Setup
 
